@@ -38,8 +38,7 @@
     "stylelint-scss": "^3.6.1"
   },
   "dependencies": {
-    "gh-pages": "^2.2.0",
-    "gsap": "^3.2.6"
+    "gh-pages": "^2.2.0"
   },
   "lint-staged": {
     "linters": {
