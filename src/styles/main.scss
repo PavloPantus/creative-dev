@@ -1,0 +1,212 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "reset";
+
+.content {
+  height: 100vh;
+
+  &__body {
+    width: 100%;
+  }
+}
+
+.advertisement {
+  align-items: center;
+  justify-content: center;
+  display: none;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+
+  &__image {
+    position: absolute;
+  }
+
+  &__fade-bottom {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__goblet {
+    // top: 63px
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__decor-bottom,
+  &__decor-top {
+    z-index: 3;
+    width: 100%;
+  }
+
+  &__fans-block-left {
+    visibility: hidden;
+    background-position: left;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/images/fans-block-left.png");
+  }
+
+  &__fans-block-right {
+    visibility: hidden;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/fans-block-right.png");
+  }
+
+  &__text-block-one-game {
+    max-width: 537px;
+    min-height: 503px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    text-shadow: 7px 7px 30px #000;
+    color: #fff;
+    font-family: "DIN Next LT Pro", serif;
+    line-height: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text-one {
+    font-weight: 900;
+    visibility: hidden;
+    font-size: 308px;
+
+  }
+
+  &__text-game {
+    font-weight: 900;
+    visibility: hidden;
+    font-size: 215px;
+  }
+
+  &__text-to-glory {
+    font-weight: 900;
+    visibility: hidden;
+    font-size: 110px;
+  }
+
+  &__team-emblem-left {
+
+    visibility: hidden;
+    left: 181px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__team-emblem-right {
+
+    visibility: hidden;
+    right: 181px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__prevideo-background {
+    z-index: 4;
+    position: absolute;
+    opacity: 0;
+    background-image: url("/images/prevideo-background.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
+  &__hotspot-button-container {
+    margin-left: 1517px;
+    margin-top: 153px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Style for "Watch TV s" */
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-family: "DIN Next LT Pro", serif;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  &__watch-hotspot-btn {
+    /* Style for "Hotspot" */
+    width: 109px;
+    height: 109px;
+    display: flex;
+    background-image: url("/images/hotspot-btn.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &__video-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    visibility: hidden;
+    width: 1188px;
+    height: 669px;
+  }
+
+  &__video {
+    width: 100%;
+  }
+
+  &__play-video {
+    z-index: 8;
+    display: flex;
+    background-color: transparent;
+    width: 129px;
+    height: 129px;
+    background-image: url("/images/play-button.png");
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    &:hover {
+      border-color: red;
+    }
+  }
+
+  &__close-all {
+    background-image: url("/images/close-all-btn.png");
+    background-size: contain;
+    z-index: 8;
+    position: absolute;
+    top: 21px;
+    right: 27px;/* Style for "Main Close" */
+    width: 51px;
+    height: 51px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    &:hover {
+      border-color: red;
+    }
+  }
+}
