@@ -1,3 +1,4 @@
+/* eslint-disable */
 'use strict';
 
 const adverisementBlock = document.querySelector('.advertisement');
@@ -20,10 +21,19 @@ const hotspotButtonContainer = document.querySelector('.advertisement__hotspot-b
 const advertVideoContainer = document.querySelector('.advertisement__video-container');
 const advertVideo = document.querySelector('.advertisement__video');
 const playVideoButton = document.querySelector('.advertisement__play-video');
+const closeVideoButton = document.querySelector('.advertisement__close-video');
 const closeAllButton = document.querySelector('.advertisement__close-all');
 
 closeAllButton.addEventListener('click', () => {
   adverisementBlock.style.display = 'none';
+});
+
+closeVideoButton.addEventListener('click', () => {
+  advertVideo.pause();
+  advertVideoContainer.style.visibility = 'hidden';
+  playVideoButton.style.visibility = 'hidden';
+
+  hotspotButtonContainer.style.visibility = 'visible';
 });
 
 playVideoButton.addEventListener('click', () => {
@@ -34,6 +44,7 @@ playVideoButton.addEventListener('click', () => {
 watchHotspot.addEventListener('click', () => {
   hotspotButtonContainer
     .style.visibility = 'hidden';
+  playVideoButton.style.visibility = 'visible';
 
   advertVideoContainer
     .style.visibility = 'visible';
@@ -146,4 +157,4 @@ const startAnimation = () => {
 
 setTimeout(() => {
   startAnimation();
-}, 2000);
+}, 3000);
